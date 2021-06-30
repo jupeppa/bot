@@ -26,7 +26,7 @@ bot.on("message", (msg) => {
         bot.sendInvoice(
             helper.getChatId(msg), 
             'Звичайний квиток',
-            'Квиток для отримання запрошення на вечіру',
+            'Квиток для отримання запрошення на вечірку',
             'payload',
             '632593626:TEST:sandbox_i75713502648',
             'Random_string_key',
