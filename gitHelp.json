@@ -1,0 +1,10 @@
+[
+    {
+      "addAll": " git add . ",
+      "commit": "git commit -m 'message'",
+      "push": "git push origin brancheName",
+      "createAndSwitch": "git checkout -b branchName",
+      "allBranch":"git branch",
+      "logs": "git log"
+    }
+  ]
