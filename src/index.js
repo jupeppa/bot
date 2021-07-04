@@ -1,12 +1,14 @@
 const TelegramBot = require("node-telegram-bot-api") 
+const mongoose = require('mongoose') 
+
 const helper = require("./helper")   
 const kb = require("./keyboard_btns")   
 const keyboard = require("./keyboard")   
-const mailer = require("./mailer")  
-const TOKEN = "1893020601:AAG-VXv_3YbWMv1bGhu2B5LkElQw35nia4Q"   
-const mongoose = require('mongoose')  
-const DB_URL = `mongodb+srv://Andrew:1NXtDpqEELgBUjY7@cluster0.z6r7y.mongodb.net/ProjectBot?retryWrites=true&w=majority`
+const mailer = require("./mailer")
 const mongo = require('./model/user')
+
+const TOKEN = "1893020601:AAG-VXv_3YbWMv1bGhu2B5LkElQw35nia4Q"   
+const DB_URL = `mongodb+srv://Andrew:1NXtDpqEELgBUjY7@cluster0.z6r7y.mongodb.net/ProjectBot?retryWrites=true&w=majority`
 
 
 mongoose.set('useNewUrlParser', true);
@@ -24,11 +26,7 @@ async function SartDB(){
   }
 }
 
-
-
 helper.logStart()   
-
-
 
 const bot = new TelegramBot(TOKEN, {
   polling: {
@@ -129,7 +127,7 @@ bot.on("successful_payment", async (msg) => {
       )
   
       await mailer.sendMail(msg.successful_payment.order_info.email)   
-      await mailer.sendMail("verda.miller12@ethereal.email")  // to check inbox check the links in terminal output
+      await mailer.sendMail("verda.miller12@ethereal.email")  // to check inbox see the links in terminal output
   
       break   
   
