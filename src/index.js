@@ -7,8 +7,8 @@ const keyboard = require("./keyboard")
 const mailer = require("./mailer")
 const mongo = require('./model/user')
 
-const TOKEN = "1893020601:AAG-VXv_3YbWMv1bGhu2B5LkElQw35nia4Q"   
-const DB_URL = `mongodb+srv://Andrew:1NXtDpqEELgBUjY7@cluster0.z6r7y.mongodb.net/ProjectBot?retryWrites=true&w=majority`
+const TOKEN = ""   
+const DB_URL = ``
 
 
 mongoose.set('useNewUrlParser', true);
